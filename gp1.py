@@ -5,13 +5,12 @@
 
 import sys
 
-
 def createArray():
     n = 0
     endstr = ""
     p1 = []
     q2 = []
-    input = open("input.txt")
+    input = open("input.txt") #hardcoded, might need to change to command line arguments
     n = input.readline()
     p1 = input.readline()
     p1 = p1.split(",")
@@ -25,6 +24,7 @@ def createArray():
     return p1, q1
 
 def recurse(p1, q1):
+    
     return
 
 def main():
@@ -33,6 +33,5 @@ def main():
     p1, q1 = createArray()
     print p1
     print q1
-
 
 main()
