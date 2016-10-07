@@ -6,12 +6,15 @@
 import sys
 
 def createArray():
+#%%^%%v0
     n = 0
     endstr = ""
     p1 = []
     q2 = []
     input = open("input.txt") #hardcoded, might need to change to command line arguments
     n = input.readline()
+#^^%^^
+    newN = n.replace('\r\n', "")
     p1 = input.readline()
     p1 = p1.split(",")
     for s in p1:
@@ -21,16 +24,26 @@ def createArray():
     q1 = input.readline()
     q1 = q1.split(",")
 
-    return p1, q1
+    return newN, p1, q1
 
-def recurse(p1, q1):
-    
-    return
+def recurse(n, p1, q1):
+    #while(n > 0):
+    for i in len(range(p1)):
+        for j in len(range(p1)):
+            if i != j:
+                absuidbaidu
+            if(q[i] > p[i]):
+                if(p[i] < p[j] && q[i] > q[j]):
+                    cross+=1
+                    
+    #return
 
 def main():
+    n = 0
     p1 = []
     q1 = []
-    p1, q1 = createArray()
+    n, p1, q1 = createArray()
+    print n
     print p1
     print q1
 
