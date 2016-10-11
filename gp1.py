@@ -6,37 +6,33 @@
 import sys
 
 def createArray():
-#%%^%%v0
     n = 0
     endstr = ""
     p1 = []
     q2 = []
     input = open("input.txt") #hardcoded, might need to change to command line arguments
-    n = input.readline()
-#^^%^^
-    newN = n.replace('\r\n', "")
-    p1 = input.readline()
-    p1 = p1.split(",")
-    for s in p1:
-        endstr = s.replace('\r\n', "")
-    p1.pop()
-    p1.append(endstr)
-    q1 = input.readline()
-    q1 = q1.split(",")
+    n = int(input.readline().rstrip('\n'))
+    p1 = input.readline().rstrip('\n').split(",")
+    q1 = input.readline().rstrip('\n').split(",")
 
-    return newN, p1, q1
+    return n, p1, q1
+
+
+def nLogN(n, p1):
+
+    return
+
+
 
 def recurse(n, p1, q1):
-    #while(n > 0):
-    for i in len(range(p1)):
-        for j in len(range(p1)):
-            if i != j:
-                absuidbaidu
-            if(q[i] > p[i]):
-                if(p[i] < p[j] && q[i] > q[j]):
-                    cross+=1
-                    
-    #return
+    cross = 0
+    if(n > -1):
+        cross = recurse(n - 1, p1, q1) 
+        for i in range(n - 1):
+            if(int(q1[n-1]) < int(q1[i])):
+                cross+=1
+    #print cross 
+    return cross
 
 def main():
     n = 0
@@ -46,5 +42,6 @@ def main():
     print n
     print p1
     print q1
+    print recurse(int(n), p1, q1)
 
 main()
